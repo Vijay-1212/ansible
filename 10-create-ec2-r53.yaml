@@ -9,6 +9,7 @@
     - mysql
     - backend
     - frontend
+    zone: vijay1212.online
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -25,7 +26,7 @@
       msg: "{{ ec2_instances }}"
 
 
-  - name: create r53 private records
+  - name: create r53 records
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
